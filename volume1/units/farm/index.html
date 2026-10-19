@@ -1,0 +1,253 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>英語點讀百科｜農場動物</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,'Microsoft JhengHei',sans-serif;background:linear-gradient(140deg,#a4dafa,#e4f8ff);color:#17365b}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #ff9a00;outline-offset:2px}.app{max-width:1700px;margin:auto;padding:10px}.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}.brand{font-size:clamp(19px,2vw,31px);font-weight:1000;color:#0068ba;text-shadow:1px 2px white}.sub{font-size:12px;color:#23608b}.pill{border:2px solid white;border-radius:20px;background:#c6ecff;padding:8px 16px;font-weight:800}.controls{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.controls button,.toolbar button,.nav button{border:0;border-radius:22px;padding:9px 14px;background:#fff;color:#1464a4;font-weight:800;box-shadow:0 3px 8px #135d8630}.controls button.active{background:#0874d4;color:#fff}.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:12px}.scene{position:relative;overflow:hidden;border:4px solid white;border-radius:22px;box-shadow:0 6px 16px #13689935;align-self:start}.scene img{display:block;width:100%;height:auto}.hotspot{position:absolute;transform:translate(-50%,-50%);border:0;background:transparent;border-radius:50%;width:6.5%;aspect-ratio:1}.hotspot.selected{outline:3px solid #fff;background:#ffe45466;box-shadow:0 0 0 7px #ffd73d55}.hotspot:hover{background:#fff5}.pop{position:absolute;pointer-events:none;transform:translate(-50%,-50%);font-size:clamp(22px,4vw,55px);animation:pop 1.2s ease-out forwards}@keyframes pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.3) rotate(-15deg)}30%{opacity:1}100%{opacity:0;transform:translate(-50%,-140%) scale(1.5) rotate(15deg)}}.side{background:#fff;border:3px solid #fff;border-radius:22px;overflow:hidden;box-shadow:0 5px 14px #17669a35}.sidehead{background:#0874cf;color:white;padding:10px 15px;font-weight:900;font-size:19px}.words{display:grid;grid-template-columns:1fr}.word{display:flex;align-items:center;gap:8px;border:0;border-bottom:1px solid #d9ebf7;background:#f4fbff;text-align:left;padding:6px 8px;min-height:51px}.word:hover,.word.active{background:#d6efff}.num{flex:none;border-radius:50%;background:#ffc932;color:#193a61;width:34px;height:34px;display:grid;place-items:center;font-weight:900}.emoji{font-size:25px;width:32px;text-align:center}.names{flex:1;min-width:0}.names b{display:block;font-size:14px}.names small{color:#316083}.sound{color:#006bd3;font-size:21px}.bottom{margin-top:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.mascot{width:80px;height:80px;object-fit:contain;object-position:left bottom;animation:bob 2.5s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-6px)}}.info{background:white;border-radius:20px;padding:9px 14px;flex:1;min-width:240px;box-shadow:0 3px 9px #156aa42a}.info b{font-size:21px}.info .cn{color:#006bc3;font-weight:800}.sentence{font-size:14px;margin-top:4px}.toolbar{display:flex;gap:7px;flex-wrap:wrap}.toolbar button{background:#126dce;color:#fff}.toolbar button:nth-child(2){background:#f6a01a}.toolbar button:nth-child(3){background:#a52ac9}.toolbar button:nth-child(4){background:#24a65b}.nav{display:flex;gap:6px;align-items:center}.status{font-size:13px;color:#315f84;margin-top:6px}.dialog{position:fixed;inset:0;background:#0d305b88;display:none;place-items:center;padding:20px;z-index:10}.dialog.open{display:grid}.modal{background:white;border-radius:24px;padding:22px;max-width:520px;width:100%;box-shadow:0 15px 40px #001a3b60}.modal h2{margin:0 0 10px}.modal button{border:0;background:#147bd3;color:#fff;border-radius:16px;padding:12px;margin:5px;font-weight:800}.answers{display:grid;grid-template-columns:1fr 1fr;gap:7px}.answers button{margin:0}.close{float:right}.hint{font-size:12px;color:#466986}@media(max-width:950px){.layout{grid-template-columns:1fr}.words{grid-template-columns:repeat(3,1fr)}.sidehead{font-size:16px}.word{min-height:54px}.controls{margin-left:0}}@media(max-width:560px){.app{padding:5px}.top{gap:5px}.pill{padding:6px 9px}.controls button{padding:7px 10px}.words{grid-template-columns:repeat(2,1fr)}.word{gap:4px;padding:5px}.emoji{font-size:21px;width:23px}.num{width:27px;height:27px;font-size:12px}.names b{font-size:12px}.bottom{gap:6px}.mascot{width:55px;height:55px}.toolbar button{padding:8px 10px;font-size:13px}}
+
+/* V2.1: keep the lower-left mascot and vocabulary card fully visible. */
+.app{width:100%;min-height:100dvh;display:flex;flex-direction:column;padding:8px 12px 10px}
+.top{flex:none;margin-bottom:7px;gap:7px}
+.layout{flex:1;min-height:0;align-items:start}
+.scene{width:min(100%,calc((100dvh - 205px)*1.46));min-width:0;justify-self:center}
+.side{max-height:calc(100dvh - 160px);display:flex;flex-direction:column;min-height:0}
+.words{overflow-y:auto;min-height:0}
+.word{min-height:44px;padding:4px 7px}
+.bottom{flex:none;margin-top:7px;gap:8px;min-height:88px;align-items:center}
+.mascot{width:70px;height:76px;object-fit:contain;object-position:center;flex:none;align-self:center;animation:bob 2.5s ease-in-out infinite}
+.info{min-width:215px;padding:8px 12px}
+.toolbar button,.nav button{padding:8px 11px}
+@media(max-width:1150px){.bottom{flex-wrap:wrap}.scene{width:100%}.side{max-height:none}.words{overflow:visible}}
+@media(max-width:950px){.app{min-height:100dvh}.layout{flex:initial}.side{max-height:none}.bottom{padding-bottom:12px}.mascot{height:70px}}
+@media(max-width:560px){.app{padding:6px}.mascot{width:54px;height:60px}.info{min-width:calc(100% - 70px)}.bottom{align-items:flex-start}.toolbar{width:100%;justify-content:center}.nav{margin:auto}.side{overflow:visible}}
+@media(max-height:720px) and (min-width:1151px){.scene{width:min(100%,calc((100dvh - 175px)*1.46))}.bottom{min-height:74px}.mascot{height:62px;width:62px}.top{margin-bottom:5px}.side{max-height:calc(100dvh - 138px)}}
+
+/* V3: early-version large scene, fixed visual hierarchy */
+.app{max-width:none;width:100%;height:100dvh;min-height:620px;overflow:hidden;padding:7px 10px;display:flex;flex-direction:column}
+.top{flex:0 0 auto;margin-bottom:6px;min-height:56px}
+.layout{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(260px,3fr);gap:10px;align-items:stretch}
+.scene{width:100%;height:100%;align-self:stretch;justify-self:stretch;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#b5e8fa}
+.scene>img{width:100%;height:100%;object-fit:fill}
+#hotspots,#effect{position:absolute;inset:0;pointer-events:none}
+.hotspot{pointer-events:auto;width:6.2%;min-width:34px;aspect-ratio:1;z-index:3;cursor:pointer}
+.hotspot:hover,.hotspot:focus-visible{background:#ffdd4066;outline:2px solid #fff}
+.side{height:100%;max-height:none;min-height:0;display:flex;flex-direction:column}
+.words{display:grid;grid-template-columns:1fr;flex:1;overflow:hidden}
+.word{min-height:0;padding:2px 6px}
+.bottom{flex:0 0 94px;min-height:0;margin-top:6px;gap:8px;flex-wrap:nowrap}
+.mascotBtn{border:0;background:transparent;padding:0;flex:0 0 86px;height:90px;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:14px}
+.mascotBtn:focus-visible{outline:3px solid #ffac13}
+.mascot{height:88px;width:84px;object-fit:contain}
+.info{flex:1 1 350px;min-width:0;max-width:520px;height:88px;overflow:hidden}
+.toolbar{flex:none;gap:6px}.toolbar button{padding:11px 16px}
+.nav{flex:none;margin-left:0;gap:5px}.nav button{padding:9px 12px}
+.nav .home{background:#fff;color:#1464a4;white-space:nowrap}
+@media(max-width:1050px){.app{height:auto;min-height:100dvh;overflow:visible}.layout{grid-template-columns:minmax(0,7fr) minmax(220px,3fr)}.bottom{flex-wrap:wrap;height:auto;flex-basis:auto}.scene{height:auto;aspect-ratio:1183/819}.scene>img{height:100%}.side{height:auto}.words{overflow:visible}}
+@media(max-width:720px){.layout{display:flex;flex-direction:column}.scene{width:100%}.side{height:auto}.words{grid-template-columns:repeat(2,minmax(0,1fr))}.bottom{gap:6px}.mascotBtn{flex-basis:58px;height:64px}.mascot{width:58px;height:62px}.info{height:auto;min-width:calc(100% - 75px)}.toolbar,.nav{margin:auto}.nav .home{white-space:normal}}
+/* V3.1: compact single-line bilingual vocabulary, without speaker icons */
+.words .word{width:100%;gap:6px;min-width:0;overflow:hidden;padding:2px 7px;white-space:nowrap}
+.words .num{width:30px;height:30px;font-size:13px}
+.words .emoji{width:27px;flex:0 0 27px;font-size:21px}
+.words .names{display:flex;align-items:baseline;gap:5px;flex:1 1 auto;min-width:0;overflow:hidden;white-space:nowrap}
+.words .names b{display:inline;flex:0 1 auto;min-width:0;font-size:clamp(12px,1.03vw,17px);line-height:1.2;white-space:nowrap;letter-spacing:-.25px}
+.words .names small{display:inline;flex:0 0 auto;font-size:clamp(10px,.77vw,12px);line-height:1.2;white-space:nowrap;color:#376489}
+.words .word.long .names b{font-size:clamp(10px,.83vw,14px);letter-spacing:-.5px}
+.words .word.long .names small{font-size:clamp(9px,.68vw,11px)}
+@media(max-width:1050px){.words .names b{font-size:clamp(11px,1.3vw,16px)}.words .names small{font-size:11px}}
+@media(max-width:720px){.words .word{padding:5px 4px;gap:3px}.words .num{width:25px;height:25px;font-size:11px}.words .emoji{width:22px;flex-basis:22px;font-size:17px}.words .names{gap:3px}.words .names b{font-size:clamp(10px,2.6vw,14px)}.words .names small{font-size:10px}.words .word.long .names b{font-size:10px}}
+
+/* V4: one coordinate system for the entire learning screen.
+   All panels and the bottom controls scale together via CSS zoom on .app. */
+html,body{margin:0;min-width:0;min-height:100%;overflow-x:hidden}
+body{display:block}
+.app{
+ box-sizing:border-box!important;width:1500px!important;max-width:none!important;
+ min-width:1500px!important;height:850px!important;min-height:850px!important;
+ margin:0!important;padding:10px 12px!important;overflow:hidden!important;
+ display:grid!important;grid-template-rows:62px 654px 104px!important;
+ row-gap:5px!important;transform:none!important;transform-origin:top left!important;
+}
+.top{height:62px!important;min-height:0!important;margin:0!important;flex-wrap:nowrap!important}
+.brand{font-size:28px!important}.controls{flex-wrap:nowrap!important;margin-left:auto!important}
+.layout{display:grid!important;grid-template-columns:1108px 356px!important;gap:12px!important;
+ height:654px!important;min-height:654px!important;max-height:654px!important;
+ flex:none!important;align-items:stretch!important}
+.scene{width:1108px!important;height:654px!important;min-height:654px!important;
+ max-height:654px!important;aspect-ratio:auto!important;overflow:hidden!important;
+ display:block!important;justify-self:stretch!important;align-self:stretch!important}
+.scene>img{width:100%!important;height:100%!important;object-fit:fill!important}
+.side{width:356px!important;height:654px!important;max-height:654px!important;
+ min-height:654px!important;overflow:hidden!important;display:flex!important;flex-direction:column!important}
+.sidehead{flex:0 0 43px!important;font-size:20px!important;padding:8px 12px!important}
+.words{height:605px!important;min-height:0!important;flex:1!important;overflow:hidden!important;
+ display:grid!important;grid-template-columns:1fr!important;grid-template-rows:repeat(12,minmax(0,1fr))!important}
+.words .word{min-height:0!important;max-height:none!important;padding:2px 7px!important}
+.words .names b{font-size:14px!important}.words .names small{font-size:11px!important}
+.bottom{height:104px!important;min-height:104px!important;max-height:104px!important;
+ margin:0!important;padding:0!important;display:flex!important;flex-wrap:nowrap!important;
+ justify-content:space-between!important;align-items:center!important;gap:9px!important;flex:none!important}
+.mascotBtn{flex:0 0 82px!important;width:82px!important;height:88px!important}
+.mascot{width:80px!important;height:84px!important}
+.info{flex:1 1 360px!important;width:auto!important;min-width:0!important;max-width:none!important;
+ height:86px!important;padding:10px 12px!important;overflow:hidden!important}
+.info b{font-size:21px!important}.sentence{font-size:13px!important}
+.toolbar{flex:0 0 auto!important;display:flex!important;flex-wrap:nowrap!important;gap:5px!important;margin:0!important}
+.toolbar button{padding:10px 12px!important;font-size:15px!important;white-space:nowrap!important}
+.nav{flex:0 0 auto!important;display:flex!important;flex-wrap:nowrap!important;
+ gap:5px!important;margin:0!important;justify-content:flex-end!important}
+.nav button{padding:10px 11px!important;font-size:14px!important;white-space:nowrap!important}
+.nav .unit-change{padding:10px 11px!important;font-size:14px!important}
+.nav #page{min-width:51px!important;text-align:center!important;white-space:nowrap!important}
+/* The 12 point coordinates remain tied to the image area, not the viewport. */
+#hotspots,#effect{position:absolute!important;inset:0!important}
+
+</style><style>
+/* Footer V5 test: compact description, single row controls, no floating navigation. */
+.bottom{justify-content:flex-start!important;gap:8px!important}
+.mascotBtn{flex:0 0 74px!important;width:74px!important}
+.mascot{width:72px!important;height:78px!important}
+.info{flex:0 0 400px!important;width:400px!important;max-width:400px!important;
+ height:80px!important;padding:8px 12px!important;box-sizing:border-box!important;
+ overflow:hidden!important}
+.info b{font-size:23px!important}
+.info .cn{font-size:16px!important}
+.sentence{font-size:14px!important;line-height:1.35!important;white-space:normal!important;
+ display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden!important}
+.toolbar{gap:6px!important}
+.toolbar button{font-size:17px!important;padding:12px 12px!important}
+.nav{gap:5px!important;flex:1 1 auto!important;min-width:0!important;justify-content:flex-end!important}
+.nav button{font-size:15px!important;padding:11px 9px!important}
+.nav .unit-change{font-size:15px!important;padding:11px 9px!important}
+.nav #page{font-size:16px!important;min-width:48px!important}
+.unit-progress{display:inline-flex;align-items:center;justify-content:center;
+ font-size:16px;font-weight:800;color:#174c78;min-width:52px;white-space:nowrap}
+
+/* V6: sentence-first learning card, preserving V5 footer/navigation */
+.info{display:flex!important;align-items:center!important;min-height:72px!important}
+.sentence-feature{margin:0!important;display:flex!important;align-items:baseline!important;flex-wrap:wrap!important;column-gap:14px!important;row-gap:3px!important;line-height:1.4!important}
+.sentence-feature .english-example{font-size:clamp(20px,1.65vw,27px)!important;font-weight:800!important;color:#171b24!important;letter-spacing:.05px}
+.sentence-feature .target-word{color:#0877d9!important;font-weight:900!important}
+.sentence-feature .chinese-example{font-size:clamp(12px,.94vw,15px)!important;font-weight:500!important;color:#62758a!important}
+
+/* V7 readability trial — Unit 10 only. Preserve V4 canvas and V5 footer. */
+.sentence-feature{column-gap:10px!important;row-gap:2px!important;line-height:1.25!important}
+.sentence-feature .english-example{font-size:30px!important;font-weight:850!important;line-height:1.18!important}
+.sentence-feature .chinese-example{font-size:19px!important;font-weight:500!important;line-height:1.2!important;color:#526579!important}
+/* Make the compact sentence card a little wider so long sentences are not clipped. */
+.info{flex:0 0 450px!important;width:450px!important;max-width:450px!important;overflow:visible!important}
+.words .word{gap:6px!important;padding:2px 7px!important}
+.words .num{width:32px!important;height:32px!important;font-size:18px!important;flex:0 0 32px!important}
+.words .emoji{width:24px!important;flex:0 0 24px!important;font-size:20px!important}
+.words .names{gap:7px!important;overflow:hidden!important}
+.words .names b{font-size:21px!important;font-weight:750!important;letter-spacing:-.35px!important}
+.words .names small{font-size:17px!important;color:#375875!important}
+.words .word.long .names b{font-size:18px!important;letter-spacing:-.5px!important}
+.words .word.long .names small{font-size:15px!important}
+/* Keep long entries on one line, rather than disrupting the 12-row list. */
+@media(max-width:1450px){.words .names b{font-size:18px!important}.words .names small{font-size:15px!important}.words .word.long .names b{font-size:16px!important}.words .word.long .names small{font-size:13px!important}.info{flex-basis:415px!important;width:415px!important;max-width:415px!important}.sentence-feature .english-example{font-size:28px!important}.sentence-feature .chinese-example{font-size:18px!important}}
+
+/* V9: compact, readable, strictly single-line vocabulary list. */
+.words{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:repeat(12,minmax(0,1fr))!important;overflow:hidden!important}
+.words .word{display:flex!important;min-height:0!important;height:auto!important;padding:2px 6px!important;gap:5px!important;align-items:center!important;white-space:nowrap!important}
+.words .names{display:flex!important;flex-direction:row!important;align-items:baseline!important;gap:5px!important;min-width:0!important;overflow:hidden!important;white-space:nowrap!important}
+.words .names b,.words .word.long .names b{display:inline!important;flex:0 1 auto!important;min-width:0!important;font-size:20px!important;font-weight:850!important;line-height:1.15!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;overflow-wrap:normal!important;letter-spacing:-.35px!important}
+.words .names small,.words .word.long .names small{display:inline!important;flex:0 0 auto!important;font-size:17px!important;font-weight:600!important;line-height:1.15!important;white-space:nowrap!important;color:#345b79!important}
+.words .emoji{flex:0 0 22px!important;width:22px!important;font-size:19px!important}
+.words .num{flex:0 0 30px!important;width:30px!important;height:30px!important;font-size:16px!important}
+
+/* V4: one coordinate system for the entire learning screen.
+   All panels and the bottom controls scale together via CSS zoom on .app. */
+html,body{margin:0;min-width:0;min-height:100%;overflow-x:hidden}
+body{display:block}
+.app{
+ box-sizing:border-box!important;width:1500px!important;max-width:none!important;
+ min-width:1500px!important;height:850px!important;min-height:850px!important;
+ margin:0!important;padding:10px 12px!important;overflow:hidden!important;
+ display:grid!important;grid-template-rows:62px 654px 104px!important;
+ row-gap:5px!important;transform:none!important;transform-origin:top left!important;
+}
+.top{height:62px!important;min-height:0!important;margin:0!important;flex-wrap:nowrap!important}
+.brand{font-size:28px!important}.controls{flex-wrap:nowrap!important;margin-left:auto!important}
+.layout{display:grid!important;grid-template-columns:1108px 356px!important;gap:12px!important;
+ height:654px!important;min-height:654px!important;max-height:654px!important;
+ flex:none!important;align-items:stretch!important}
+.scene{width:1108px!important;height:654px!important;min-height:654px!important;
+ max-height:654px!important;aspect-ratio:auto!important;overflow:hidden!important;
+ display:block!important;justify-self:stretch!important;align-self:stretch!important}
+.scene>img{width:100%!important;height:100%!important;object-fit:fill!important}
+.side{width:356px!important;height:654px!important;max-height:654px!important;
+ min-height:654px!important;overflow:hidden!important;display:flex!important;flex-direction:column!important}
+.sidehead{flex:0 0 43px!important;font-size:20px!important;padding:8px 12px!important}
+.words{height:605px!important;min-height:0!important;flex:1!important;overflow:hidden!important;
+ display:grid!important;grid-template-columns:1fr!important;grid-template-rows:repeat(12,minmax(0,1fr))!important}
+.words .word{min-height:0!important;max-height:none!important;padding:2px 7px!important}
+.words .names b{font-size:14px!important}.words .names small{font-size:11px!important}
+.bottom{height:104px!important;min-height:104px!important;max-height:104px!important;
+ margin:0!important;padding:0!important;display:flex!important;flex-wrap:nowrap!important;
+ justify-content:space-between!important;align-items:center!important;gap:9px!important;flex:none!important}
+.mascotBtn{flex:0 0 82px!important;width:82px!important;height:88px!important}
+.mascot{width:80px!important;height:84px!important}
+.info{flex:1 1 360px!important;width:auto!important;min-width:0!important;max-width:none!important;
+ height:86px!important;padding:10px 12px!important;overflow:hidden!important}
+.info b{font-size:21px!important}.sentence{font-size:13px!important}
+.toolbar{flex:0 0 auto!important;display:flex!important;flex-wrap:nowrap!important;gap:5px!important;margin:0!important}
+.toolbar button{padding:10px 12px!important;font-size:15px!important;white-space:nowrap!important}
+.nav{flex:0 0 auto!important;display:flex!important;flex-wrap:nowrap!important;
+ gap:5px!important;margin:0!important;justify-content:flex-end!important}
+.nav button{padding:10px 11px!important;font-size:14px!important;white-space:nowrap!important}
+.nav .unit-change{padding:10px 11px!important;font-size:14px!important}
+.nav #page{min-width:51px!important;text-align:center!important;white-space:nowrap!important}
+/* The 12 point coordinates remain tied to the image area, not the viewport. */
+#hotspots,#effect{position:absolute!important;inset:0!important}
+
+
+
+
+/* Shared standard: preserve exact Unit 10 sentence typography */
+.sentence-feature{margin:0!important;display:flex!important;align-items:baseline!important;flex-wrap:wrap!important;column-gap:10px!important;row-gap:2px!important;line-height:1.25!important}
+.sentence-feature .english-example{font-size:30px!important;font-weight:850!important;line-height:1.2!important;color:#171b24!important}
+.sentence-feature .target-word{color:#0877d9!important;font-weight:900!important}
+.sentence-feature .chinese-example{font-size:20px!important;font-weight:600!important;line-height:1.2!important;color:#384b60!important}
+/* No wrap for single-line word entries */
+.words .names{display:flex!important;flex-direction:row!important;align-items:baseline!important;gap:5px!important;white-space:nowrap!important;min-width:0!important;overflow:hidden!important}
+.words .names b{display:inline!important;min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.words .names small{display:inline!important;flex:none!important;white-space:nowrap!important}
+
+</style><style>.brandHome{display:block;text-decoration:none;color:inherit;border-radius:12px;cursor:pointer}.brandHome:hover .brand{text-decoration:underline;text-underline-offset:3px}.brandHome:focus-visible{outline:3px solid #ff9a00;outline-offset:3px}</style></head><body><main class="app"><header class="top"><a class="brandHome" href="../../index.html" title="回到本冊目錄" aria-label="回到本冊目錄"><div class="brand">🐓 英語點讀百科｜農場動物</div><div class="sub">Junior English Encyclopedia · Farm Animals · V3.1</div></a><div class="controls"><span>發音</span><button data-lang="en" class="active">英文</button><button data-lang="zh">中文</button><button data-lang="both">雙語</button><span>語速</span><button data-speed="1" class="active">正常</button><button data-speed="0.75">慢速</button></div></header><div class="layout"><section class="scene" id="scene"><img src="assets/farm_scene.webp" alt="農場場景，12個點讀動物；單字資訊統一顯示於下方學習區"><div id="hotspots"></div><div id="effect"></div></section><aside class="side"><div class="sidehead">📚 單字列表　</div><div class="words" id="words"></div></aside></div><footer class="bottom"><button id="mascotIntro" class="mascotBtn" title="波哥大開場白：喔喔喔！農場醒過來了！" aria-label="重播波哥大的開場白"><img class="mascot" src="assets/mascot.webp" alt="綠色波哥大鸚鵡"></button><div class="info"><div class="sentence sentence-feature" id="sentence" aria-live="polite"></div></div><div class="toolbar"><button id="example">📖 例句</button><button id="quiz">🎮 聽音找圖</button></div><div class="nav"><button id="prev" aria-label="上一個單字">❮</button><strong id="page">1 / 12</strong><button id="next" aria-label="下一個單字">❯</button><button id="home" class="home">⌂ 回首頁</button><button type="button" class="unit-change" id="unitPrev" title="前往第4單元">❮ 上一單元</button><span class="unit-progress">5 / 10</span><button type="button" class="unit-change" id="unitNext" title="前往第6單元">下一單元 ❯</button></div></footer></main><div class="dialog" id="dialog"><div class="modal"><button class="close" id="close">✕</button><h2 id="modalTitle">聽音找圖</h2><div id="modalBody"></div></div></div><script>
+function renderSentence(d){
+ const node=document.getElementById('sentence');if(!node)return;
+ node.replaceChildren();const en=document.createElement('span');en.className='english-example';
+ const word=d[0].trim();const esc=s=>Array.from(s).map(c=>'\\^$.*+?()[]{}|'.includes(c)?'\\'+c:c).join('');
+ const forms=[word,word+'s',word+'es'];if(word.endsWith('y'))forms.push(word.slice(0,-1)+'ies');
+ const pattern=new RegExp('('+forms.sort((a,b)=>b.length-a.length).map(esc).join('|')+')','ig');
+ const sentence=d[5]||'';let last=0;for(const match of sentence.matchAll(pattern)){const i=match.index;if(i>last)en.append(document.createTextNode(sentence.slice(last,i)));const mark=document.createElement('span');mark.className='target-word';mark.textContent=match[0];en.append(mark);last=i+match[0].length;}en.append(document.createTextNode(sentence.slice(last)));
+ const zh=document.createElement('span');zh.className='chinese-example';zh.textContent=d[6]||'';
+ node.append(en,zh);
+}
+
+const data=[["Rooster", "公雞", "🐓", 8.2671, 14.5788, "The rooster crows in the morning.", "公雞在早上啼叫。", "A rooster is a male chicken.", "🐓"], ["Hen", "母雞", "🐔", 27.5, 21.4, "The hen lays an egg.", "母雞生了一顆蛋。", "A hen is an adult female chicken.", "🥚"], ["Cow", "乳牛", "🐄", 43.2, 28.1, "The cow is eating grass.", "乳牛正在吃草。", "Cows are mammals.", "🐄"], ["Horse", "馬", "🐎", 81.0989, 28.0586, "The horse runs fast.", "馬跑得很快。", "Horses can sleep while standing.", "🐎"], ["Sheep", "綿羊", "🐑", 15.3, 48.1, "The sheep has soft wool.", "綿羊有柔軟的羊毛。", "Wool comes from sheep.", "🐑"], ["Pig", "豬", "🐖", 36.4, 52.6, "The pig is playing in the mud.", "豬正在泥巴裡玩耍。", "Pigs have an excellent sense of smell.", "🐖"], ["Goat", "山羊", "🐐", 60.6086, 54.2857, "The goat is standing by the fence.", "山羊站在柵欄旁。", "Goats are good climbers.", "🐐"], ["Dog", "狗", "🐕", 76.3, 56.6, "The dog is sitting on the grass.", "狗正坐在草地上。", "Dogs use their noses to explore.", "🐕"], ["Cat", "貓", "🐈", 89.3153, 61.4652, "The cat is looking at us.", "貓正看著我們。", "Cats use whiskers to sense nearby objects.", "🐈"], ["Duck", "鴨子", "🦆", 26.8301, 83.1502, "The duck is swimming in the pond.", "鴨子正在池塘裡游泳。", "Ducks have webbed feet.", "🦆"], ["Chick", "小雞", "🐤", 69.9, 87.9, "The chicks are walking together.", "小雞們正一起走路。", "A chick is a baby chicken.", "🐤"], ["Rabbit", "兔子", "🐇", 88.9, 82.2, "The rabbit has long ears.", "兔子有長耳朵。", "Rabbits eat plants.", "🐇"]];
+let current=0,lang='en',speed=1,quizIndex=0,correct=0;const $=id=>document.getElementById(id);const speech=window.speechSynthesis;function speak(text,locale){if(!('speechSynthesis'in window)){status('此瀏覽器不支援語音播放');return;}return new Promise(resolve=>{const u=new SpeechSynthesisUtterance(text);u.lang=locale;u.rate=speed;u.onend=resolve;u.onerror=resolve;speech.speak(u);});}async function say(en,zh){speech.cancel();if(lang==='en')await speak(en,'en-US');else if(lang==='zh')await speak(zh,'zh-TW');else{await speak(en,'en-US');await speak(zh,'zh-TW');}}function status(s){}function effect(i){const d=data[i],el=document.createElement('span');el.className='pop';el.style.left=Math.min(97.5,d[3])+'%';el.style.top=d[4]+'%';el.textContent=d[8];$('effect').append(el);setTimeout(()=>el.remove(),1250)}function select(i,voice=true){current=(i+12)%12;const d=data[current];renderSentence(d);$('page').textContent=(current+1)+' / 12';document.querySelectorAll('.word').forEach((e,j)=>e.classList.toggle('active',j===current));document.querySelectorAll('.hotspot').forEach((e,j)=>e.classList.toggle('selected',j===current));effect(current);if(voice)say(d[0],d[1]);}data.forEach((d,i)=>{const b=document.createElement('button');b.className='hotspot';b.style.left=Math.min(97.5,d[3])+'%';b.style.top=d[4]+'%';b.title=`${i+1}. ${d[0]} ${d[1]}`;b.setAttribute('aria-label',b.title);b.onclick=()=>select(i);$('hotspots').append(b);const w=document.createElement('button');w.className='word'+(d[0].length>12?' long':'');w.innerHTML=`<span class="num">${String(i+1).padStart(2,'0')}</span><span class="emoji">${d[2]}</span><span class="names"><b>${d[0]}</b><small>${d[1]}</small></span>`;w.onclick=()=>select(i);$('words').append(w)});document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;document.querySelectorAll('[data-lang]').forEach(x=>x.classList.toggle('active',x===b));say(data[current][0],data[current][1])});document.querySelectorAll('[data-speed]').forEach(b=>b.onclick=()=>{speed=Number(b.dataset.speed);document.querySelectorAll('[data-speed]').forEach(x=>x.classList.toggle('active',x===b))});$('prev').onclick=()=>select(current-1);$('next').onclick=()=>select(current+1);$('example').onclick=()=>say(data[current][5],data[current][6]);function openModal(title,html){$('modalTitle').textContent=title;$('modalBody').innerHTML=html;$('dialog').classList.add('open')}function closeModal(){$('dialog').classList.remove('open');speech.cancel()}$('close').onclick=closeModal;$('dialog').onclick=e=>{if(e.target===$('dialog'))closeModal()};function quiz(){quizIndex=Math.floor(Math.random()*12);const choices=[quizIndex];while(choices.length<4){const i=Math.floor(Math.random()*12);if(!choices.includes(i))choices.push(i)}choices.sort(()=>Math.random()-.5);openModal('🎮 聽音找圖',`<p>聽波哥大說英文，選出正確圖片。</p><button id="hear">🔊 播放題目</button><div class="answers">${choices.map(i=>`<button data-answer="${i}">${data[i][2]}　${data[i][1]}</button>`).join('')}</div><p id="feedback"></p>`);$('hear').onclick=()=>{speech.cancel();speak(data[quizIndex][0],'en-US')};document.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{const yes=Number(b.dataset.answer)===quizIndex;$('feedback').textContent=yes?'🎉 答對了！波哥大為你鼓掌！':'再試一次！你一定可以！';if(yes){select(quizIndex,false);setTimeout(quiz,1100)}});$('hear').click()}$('quiz').onclick=quiz;$('mascotIntro').onclick=playIntro;
+$('home').onclick=()=>{window.location.href='../../index.html'};
+function playIntro(){speech.cancel();const u=new SpeechSynthesisUtterance("Cock-a-doodle-doo! The farm is waking up!");u.lang='en-US';u.rate=.9;const vs=speech.getVoices();u.voice=vs.find(v=>v.lang.toLowerCase().startsWith('en-us')&&/male|david|guy/i.test(v.name))||vs.find(v=>v.lang.toLowerCase().startsWith('en-us'))||null;speech.speak(u)}
+select(0,false);
+// Auto playback is browser-dependent. The parrot button always offers a user-triggered replay.
+window.addEventListener('load',()=>setTimeout(()=>{if(document.visibilityState==='visible')playIntro()},450),{once:true});
+</script>
+
+<script>
+document.getElementById('unitPrev').onclick=()=>{window.location.href='../classroom/index.html'};
+document.getElementById('unitNext').onclick=()=>{window.location.href='../fruits/index.html'};
+document.getElementById('home').onclick=()=>{window.location.href='../../index.html'};
+</script><script>
+(function(){
+ const DESIGN_W=1500,DESIGN_H=850;
+ function fit(){
+   const w=document.documentElement.clientWidth||window.innerWidth;
+   const h=window.innerHeight;
+   const scale=Math.min(w/DESIGN_W,h/DESIGN_H);
+   const app=document.querySelector('.app');
+   if(!app)return;
+   app.style.setProperty('zoom',String(Math.max(0.25,scale)),'important');
+   app.style.setProperty('margin-left',Math.max(0,(w-DESIGN_W*scale)/2/scale)+'px','important');
+   app.style.setProperty('margin-right','0px','important');
+ }
+ window.addEventListener('resize',fit,{passive:true});
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fit,{once:true});else fit();
+})();
+</script></body></html>

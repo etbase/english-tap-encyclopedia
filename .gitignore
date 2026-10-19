@@ -8,3 +8,5 @@ Desktop.ini
 .idea/
 .vscode/
 未命名/
+doc_*.txt
+doc_*.json
